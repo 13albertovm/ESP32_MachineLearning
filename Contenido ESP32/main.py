@@ -25,8 +25,8 @@ i2c = SoftI2C(scl=Pin(22), sda=Pin(21))
 
 # **************************************#
 # Configure the ESP32 wifi as STAtion.
-ssid = 'vodafoneF9A2'  #Nombre de la Red
-password = '88XHJA2LKNFFU7' #Contraseña de la red
+ssid = ''  #Nombre de la Red
+password = '' #Contraseña de la red
 wlan = network.WLAN(network.STA_IF)
 
 print("Empezando")
@@ -44,8 +44,8 @@ print(wlan.ifconfig()) #Muestra la IP y otros datos del Wi-Fi
 # Global variables and constants:
 SERVER = "mqtt.thingspeak.com"
 client = MQTTClient("umqtt_client", SERVER)
-CHANNEL_ID = "1550310"
-WRITE_API_KEY = "CVR10RFY4P83OFDC"
+CHANNEL_ID = ""
+WRITE_API_KEY = ""
 # topic = "channels/1249898/publish/PJX6E1D8XLV18Z87"
 topic = "channels/" + CHANNEL_ID + "/publish/" + WRITE_API_KEY
 topic2="channels/1638902/publish/SLVWHRE0VZ29FUJB"
