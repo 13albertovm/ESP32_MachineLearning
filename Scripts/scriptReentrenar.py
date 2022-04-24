@@ -11,7 +11,7 @@ import time
 import os
 import csv
 
-consulta = requests.get("https://thingspeak.com/channels/1638902/feeds.json?results=2")
+consulta = requests.get("")
 file='csv_file.csv'
 global f
 header = ['TMax', 'Tmin', 'Hum']
@@ -93,7 +93,7 @@ while True:
 		filename1 = 'weather_TxHum.h5'
 		filename2= 'weather_TxHum.tflite'
 		ftp = ftplib.FTP("localhost") 
-		ftp.login("alberto", "")
+		ftp.login("", "")
 		ftp.storbinary("STOR " + filename1, open(filename1, 'rb'))
 		ftp.storbinary("STOR " + filename2, open(filename2, 'rb'))
 		ftp.quit()
