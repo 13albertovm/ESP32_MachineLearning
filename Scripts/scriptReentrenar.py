@@ -64,8 +64,8 @@ while True:
 		print("descargando modelo")
 		path = '/'
 		filename = 'weather_TxHum.h5'
-		ftp = ftplib.FTP("192.168.0.23") 
-		ftp.login("alberto", "") 
+		ftp = ftplib.FTP("") 
+		ftp.login("", "") 
 		print("Probando")
 		ftp.cwd(path)
 		ftp.retrbinary("RETR " + filename, open(filename, 'wb').write)
